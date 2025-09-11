@@ -1,12 +1,43 @@
-# React + Vite
+# 🌐 Personal Portfolio Website  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Welcome to my website repo!
 
-Currently, two official plugins are available:
+This is a clean and modern personal portfolio website built with **React**, **Vite**, and **TailwindCSS**, and deployed on **Vercel**.  
+This project showcases my background as a **Software Engineer** with Backend, DevOps, and Technological Entrepreneurship experience.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features  
+- Responsive design (desktop & mobile)  
+- Animated sections and smooth transitions  
+- Featured projects section with tech stack badges  
+- About me section highlighting Backend, DevOps, and Entrepreneurship  
+- Contact section with email & social links  
+- Easy deployment on Vercel  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack  
+- **Frontend:** React, Vite, TailwindCSS  
+- **Deployment:** Vercel  
+- **Version Control:** Git & GitHub  
+
+---
+
+## 📂 Project Structure
+```.
+├─ public/                # Static assets (favicon, og images)
+├─ src/
+│  ├─ components/         # Reusable UI components
+│  ├─ sections/           # Page sections (Hero, About, Projects, Contact)
+│  ├─ lib/                # Utils, hooks, constants
+│  ├─ assets/             # Images, icons, fonts
+│  ├─ styles/             # Global/Tailwind styles
+│  ├─ App.jsx             # Root component
+│  └─ main.jsx            # App entry
+├─ .gitignore
+├─ package.json
+├─ tailwind.config.js
+├─ postcss.config.js
+└─ vite.config.js
+```
