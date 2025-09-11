@@ -21,8 +21,8 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Entrepreneurial mindset, engineer’s rigor:<br/>
-            I prototype fast, validate with users, and ship reliable, scalable systems.
+            I'm a Software Engineer (B.Sc.) and currently an M.A. student in Technological Entrepreneurship.
+            I love dreaming up new ideas and finding ways to bring them to life.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
