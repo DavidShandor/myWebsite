@@ -45,8 +45,8 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href="./public/David Shandor CV.pdf"
-                target="_ blank"
+                href="/David_Shandor_CV.pdf"
+                target="_blank"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 Download CV
