@@ -3,30 +3,32 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
+    title: "Personal Portfolio",
+    description: "A clean, responsive portfolio built from scratch with reusable components, \
+    smooth animations, and a simple Vercel deployment flow.",
     image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "#",
-    githubUrl: "#",
+    tags: ["React", "Vite", "TailwindCSS", "Vercel"],
+    demoUrl: "shandor.dev",
+    githubUrl: "https://github.com/DavidShandor/myWebsite",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "CI/CD & Cloud Automation",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
+      "End-to-end pipeline that provisions cloud infra with Terraform, builds images, deploys to Kubernetes via Helm,\
+      and ships automated releases with monitoring.",
     image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+    tags: ["Docker", "Kubernetes", "Terraform", "Helm", "AWS", "Jenkins", "ArgoCD"],
     demoUrl: "#",
     githubUrl: "#",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Next Project",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
+      "A new experiment I’m building—details and code coming soon..\<br/>",
     image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+    tags: ["Coming Soon"],
     demoUrl: "#",
     githubUrl: "#",
   },
