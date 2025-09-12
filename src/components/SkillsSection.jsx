@@ -18,15 +18,16 @@ const skills = [
   { name: "ArgoCD", level: 62, category: "devops" },
   { name: "Terraform", level: 65, category: "devops" },
   { name: "AWS", level: 65, category: "cloud" },
-  { name: "CI/CD (GitHub Actions)", level: 75, category: "devops" },
+  { name: "GitHub Actions", level: 75, category: "devops" },
   { name: "Jenkins", level: 70, category: "devops" },
   { name: "Nginx", level: 65, category: "devops" },
 
   // Monitoring & Logging
   { name: "Prometheus", level: 62, category: "monitoring" },
   { name: "Grafana", level: 65, category: "monitoring" },
-  { name: "Loki/ELK", level: 58, category: "monitoring" },
-  { name: "Alertmanager", level: 58, category: "monitoring" },
+  { name: "ElasticSearch", level: 58, category: "monitoring" },
+  { name: "Kibana", level: 58, category: "monitoring" },
+  { name: "FluentBit", level: 58, category: "monitoring" },
 
   // Security
   { name: "Wiz (CSPM)", level: 60, category: "security" },
@@ -37,7 +38,7 @@ const skills = [
 ];
 
 
-const categories = ["all", "backend", "databases", "devops", "monitoring", "security", "tools"];
+const categories = ["all", "backend", "cloud", "devops", "databases", "monitoring", "security", "tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");

@@ -34,7 +34,7 @@ export const HeroSection = () => {
            Passionate about turning ideas into reality
           </p>
 
-          <div className="pt-4 opacity-0 animate-fade-in-delay-4">
+          <div className="py-8 pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#projects" className="cosmic-button">
               View My Work
             </a>
