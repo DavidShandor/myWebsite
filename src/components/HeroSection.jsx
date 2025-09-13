@@ -36,7 +36,7 @@ export const HeroSection = () => {
 
           <div className="py-8 pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#projects" className="cosmic-button">
-              View My Work
+              Wanna Free Drink?
             </a>
           </div>
         </div>

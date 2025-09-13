@@ -15,12 +15,12 @@ const projects = [
     id: 2,
     title: "CI/CD & Cloud Automation",
     description:
-      "End-to-end pipeline that provisions cloud infra with Terraform, builds images, deploys to Kubernetes via Helm,\
-      and ships automated releases with monitoring.",
+      "Cloud-native app: Docker/Compose, Jenkins CI/CD, Terraform-provisioned AWS + K8s,\
+       GitOps with Argo CD (Helm), and monitoring via EFK + Prometheus/Grafana.",
     image: "/projects/project2.png",
     tags: ["Docker", "Kubernetes", "Terraform", "Helm", "AWS", "Jenkins", "ArgoCD"],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://github.com/DavidShandor/DevOps_Project",
+    githubUrl: "https://github.com/DavidShandor/DevOps_Project",
   },
   {
     id: 3,
@@ -44,8 +44,7 @@ export const ProjectsSection = () => {
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Each project was carefully
-          crafted with attention to detail, performance, and user experience.
+          Here are some of my recent projects.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

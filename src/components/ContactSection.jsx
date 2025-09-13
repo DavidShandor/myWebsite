@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 
-// החלף לאימייל שלך. אחרי אימות ראשון ב-FormSubmit אפשר להחליף ל-slug במקום אימייל גלוי.
+// אחרי אימות ראשון ב-FormSubmit אפשר להחליף ל-slug
 const FORM_ENDPOINT = "https://formsubmit.co/ajax/davidshandor15@gmail.com";
 
 export const ContactSection = () => {
@@ -22,21 +22,17 @@ export const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      const form = e.currentTarget; // חייב להיות על <form onSubmit={...}>
+      const form = e.currentTarget;
       const formData = new FormData(form);
       const payload = Object.fromEntries(formData.entries());
 
-      // פרמטרים שימושיים ל-FormSubmit (לא חובה)
       payload._subject = "New message from portfolio";
       payload._template = "table";
-      payload._captcha = "false"; // בטל reCAPTCHA שלהם אם לא צריך
+      payload._captcha = "false";
 
       const res = await fetch(FORM_ENDPOINT, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(payload),
       });
 
@@ -45,10 +41,9 @@ export const ContactSection = () => {
         throw new Error(text || "Failed to send");
       }
 
-      // הצלחה
       toast({
         title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        description: "Thanks for reaching out! Let’s set up a quick chat - drink on me when we meet.",
       });
       form.reset();
     } catch (err) {
@@ -66,15 +61,15 @@ export const ContactSection = () => {
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Get In <span className="text-primary"> Touch</span>
+          Let's <span className="text-primary"> Connect</span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Have a project in mind or want to collaborate? Feel free to reach out.
-          I'm always open to discussing new opportunities.
+          Invite me for a short interview (virtual or over coffee) - I’ll bring the drink
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* עמודת מידע וקישורים */}
           <div className="space-y-8">
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
 
@@ -86,10 +81,10 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium">Email</h4>
                   <a
-                    href="mailto:[email protected]"
+                    href="mailto:davidshandor15@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    [email protected]
+                    davidshandor15@gmail.com
                   </a>
                 </div>
               </div>
@@ -123,7 +118,9 @@ export const ContactSection = () => {
             </div>
 
             <div className="pt-8">
-              <h4 className="font-medium mb-4">Connect With Me</h4>
+              <h4 className="font-medium mb-4">
+                Connect With Me via LinkedIn or WhatsApp <br /> Free Drink Included!
+              </h4>
               <div className="flex space-x-4 justify-center">
                 <a
                   href="https://www.linkedin.com/in/davidshandor/"
@@ -135,7 +132,7 @@ export const ContactSection = () => {
                   <Linkedin className="h-6 w-6 text-primary" />
                 </a>
                 <a
-                  href="https://wa.me/972508333601" // בלי '+' ובלי רווחים
+                  href="https://wa.me/972508333601"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"
@@ -144,13 +141,26 @@ export const ContactSection = () => {
                   <MessageCircle className="h-6 w-6 text-primary" />
                 </a>
               </div>
+
+              {/* === כאן הוספנו את כפתור ה-CV === */}
+              <div className="pt-6 flex justify-center">
+                <a
+                  href="/David_Shandor_CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+                >
+                  Download CV
+                </a>
+              </div>
+              {/* =============================== */}
             </div>
           </div>
 
+          {/* עמודת הטופס */}
           <div className="bg-card p-8 rounded-lg shadow-xs">
-            <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
+            <h3 className="text-2xl font-semibold mb-6">Claim Free Drink</h3>
 
-            {/* שים לב: onSubmit על ה-form (ולא על div) */}
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -196,9 +206,7 @@ export const ContactSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
-                )}
+                className={cn("cosmic-button w-full flex items-center justify-center gap-2")}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
                 <Send size={16} />

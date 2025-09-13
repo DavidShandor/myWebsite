@@ -2,10 +2,13 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const skills = [
-  // Backend
-  { name: "Node.js", level: 75, category: "backend" },
-  { name: "Express", level: 70, category: "backend" },
-  { name: "Python", level: 70, category: "backend" },
+  // Languages
+  { name: "Python", level: 80, category: "languages" },
+  { name: "JavaScript", level: 80, category: "languages" },
+  { name: "C", level: 80, category: "languages" },
+  { name: "C++", level: 80, category: "languages" },
+  { name: "C#", level: 80, category: "languages" },
+  { name: "Bash", level: 80, category: "languages" },
 
   // Databases
   { name: "MongoDB", level: 65, category: "databases" },
@@ -13,21 +16,17 @@ const skills = [
 
   // DevOps & Cloud
   { name: "Docker", level: 80, category: "devops" },
-  { name: "Kubernetes", level: 68, category: "devops" },
-  { name: "Helm", level: 62, category: "devops" },
-  { name: "ArgoCD", level: 62, category: "devops" },
+  { name: "Kubernetes", level: 70, category: "devops" },
+  { name: "Helm", level: 65, category: "devops" },
+  { name: "Argo CD", level: 65, category: "devops" },
   { name: "Terraform", level: 65, category: "devops" },
-  { name: "AWS", level: 65, category: "cloud" },
-  { name: "GitHub Actions", level: 75, category: "devops" },
-  { name: "Jenkins", level: 70, category: "devops" },
-  { name: "Nginx", level: 65, category: "devops" },
+  { name: "AWS", level: 70, category: "cloud" },
+  { name: "CI/CD (Jenkins, GitHub Actions)", level: 72, category: "devops" },
 
-  // Monitoring & Logging
-  { name: "Prometheus", level: 62, category: "monitoring" },
-  { name: "Grafana", level: 65, category: "monitoring" },
-  { name: "ElasticSearch", level: 58, category: "monitoring" },
-  { name: "Kibana", level: 58, category: "monitoring" },
-  { name: "FluentBit", level: 58, category: "monitoring" },
+   // Monitoring & Logging
+  { name: "Prometheus", level: 65, category: "monitoring" },
+  { name: "Grafana", level: 68, category: "monitoring" },
+  { name: "EFK Stack (Elasticsearch, Fluent Bit, Kibana)", level: 60, category: "monitoring" },
 
   // Security
   { name: "Wiz (CSPM)", level: 60, category: "security" },
@@ -38,7 +37,7 @@ const skills = [
 ];
 
 
-const categories = ["all", "backend", "cloud", "devops", "databases", "monitoring", "security", "tools"];
+const categories = ["all", "languages", "cloud", "devops", "databases", "monitoring", "security", "tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
