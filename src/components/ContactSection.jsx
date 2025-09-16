@@ -26,7 +26,7 @@ export const ContactSection = () => {
       const formData = new FormData(form);
       const payload = Object.fromEntries(formData.entries());
 
-      payload._subject = "New message from portfolio";
+      payload._subject = "New message from shandor.dev";
       payload._template = "table";
       payload._captcha = "false";
 
@@ -43,7 +43,8 @@ export const ContactSection = () => {
 
       toast({
         title: "Message sent!",
-        description: "Thanks for reaching out! Let’s set up a quick chat - drink on me when we meet.",
+        description: "Thank you for your message. I'll get back to you soon.",
+
       });
       form.reset();
     } catch (err) {
@@ -61,11 +62,14 @@ export const ContactSection = () => {
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Let's <span className="text-primary"> Connect</span>
+          Get In <span className="text-primary"> Touch</span>
+
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Invite me for a short interview (virtual or over coffee) - I’ll bring the drink
+          Have a project in mind or want to collaborate? Feel free to reach out.
+          I'm always open to discussing new opportunities.
+
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -118,9 +122,8 @@ export const ContactSection = () => {
             </div>
 
             <div className="pt-8">
-              <h4 className="font-medium mb-4">
-                Connect With Me via LinkedIn or WhatsApp <br /> Free Drink Included!
-              </h4>
+              <h4 className="font-medium mb-4">Let's Connect!</h4>
+
               <div className="flex space-x-4 justify-center">
                 <a
                   href="https://www.linkedin.com/in/davidshandor/"
@@ -140,10 +143,8 @@ export const ContactSection = () => {
                 >
                   <MessageCircle className="h-6 w-6 text-primary" />
                 </a>
-              </div>
-
-              {/* === כאן הוספנו את כפתור ה-CV === */}
-              <div className="pt-6 flex justify-center">
+                {/* === כאן הוספנו את כפתור ה-CV === */}
+              
                 <a
                   href="/David_Shandor_CV.pdf"
                   target="_blank"
@@ -151,16 +152,14 @@ export const ContactSection = () => {
                   className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
                 >
                   Download CV
-                </a>
+                </a> 
               </div>
-              {/* =============================== */}
             </div>
           </div>
 
           {/* עמודת הטופס */}
           <div className="bg-card p-8 rounded-lg shadow-xs">
-            <h3 className="text-2xl font-semibold mb-6">Claim Free Drink</h3>
-
+            <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
